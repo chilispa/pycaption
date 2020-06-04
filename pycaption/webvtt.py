@@ -435,10 +435,10 @@ class WebVTTWriter(BaseWriter):
                 # TODO: Refactor pycaption and eliminate the concept of a
                 # "Style node"
             elif node.type_ == CaptionNode.BREAK:
-                if i > 0 and nodes[i - 1].type_ != CaptionNode.TEXT:
-                    s += '&nbsp;'
-                if i == 0:  # cue text starts with a break
-                    s += '&nbsp;'
+                # if i > 0 and nodes[i - 1].type_ != CaptionNode.TEXT:
+                #     s += '&nbsp;'
+                # if i == 0:  # cue text starts with a break
+                #     s += '&nbsp;'
                 s += '\n'
 
         if s:
