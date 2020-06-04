@@ -384,8 +384,8 @@ class WebVTTWriter(BaseWriter):
             cue_settings += " position:{},start".format(six.text_type(left_offset))
         if top_offset:
             cue_settings += " line:" + six.text_type(top_offset)
-        if cue_width:
-            cue_settings += " size:" + six.text_type(cue_width)
+        # if cue_width:
+        #     cue_settings += " size:" + six.text_type(cue_width)
 
         return cue_settings
 
@@ -452,8 +452,8 @@ class WebVTTWriter(BaseWriter):
             - http://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-text-span
         :type s: unicode
         """
-        s = s.replace('&', '&amp;')
-        s = s.replace('<', '&lt;')
+        # s = s.replace('&', '&amp;')
+        # s = s.replace('<', '&lt;')
 
         # The substring "-->" is also not allowed according to this:
         #   - http://dev.w3.org/html5/webvtt/#dfn-webvtt-cue-block
