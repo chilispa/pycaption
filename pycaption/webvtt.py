@@ -378,10 +378,10 @@ class WebVTTWriter(BaseWriter):
 
         cue_settings = ''
 
-        if alignment and alignment != 'middle':
-            cue_settings += " align:" + alignment
-        if left_offset:
-            cue_settings += " position:{},start".format(six.text_type(left_offset))
+        # if alignment and alignment != 'middle':
+        #     cue_settings += " align:" + alignment
+        # if left_offset:
+        #     cue_settings += " position:{},start".format(six.text_type(left_offset))
         if top_offset:
             cue_settings += " line:" + six.text_type(top_offset)
         # if cue_width:
