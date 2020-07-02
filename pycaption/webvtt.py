@@ -230,7 +230,7 @@ class WebVTTWriter(BaseWriter):
         captions = caption_set.get_captions(lang)
 
         return output + '\n'.join(
-            [self._write_caption(caption_set, caption) for caption in captions])
+            [self._write_caption(caption_set, caption) for caption in captions if caption])
 
     def _timestamp(self, ts):
         td = datetime.timedelta(microseconds=ts)
